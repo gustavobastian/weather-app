@@ -17,7 +17,8 @@ module.exports = {
          import:'./src/env.js',                    
         },        
     cityForm:{
-    import:'./src/cityForm.js',                    
+        import:'./src/cityForm.js',                
+        dependOn:'weatherService',                     
     },             
   },
   plugins: [

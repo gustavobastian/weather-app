@@ -1,20 +1,58 @@
 
 .mainContent{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    resize: both;
+    flex-direction: column;    
     background: green;
-    height: 100vh;
-    align-items: center;
+    height: 100vh;    
+    position: relative;
 }
 .footer{
     display: flex;
-    flex-direction: row;
-    background: transparent;
-    height: 100vh;
-    width: 100%;
-    margin-top: auto;
+    resize: both;
+    flex-direction: row;    
+    background: transparent;    
+    width: 100%;    
     margin-bottom: 10%;
-    padding-left: 5%;
+    padding-left: 5%;    
+}
+#innerPlace{
+    display: grid;
+    resize: both;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50% ;
     
+    width: 80%;
+    margin-left:10%;
+    margin-right:10%;
+}
+.contentForm{
+    display:grid;
+    resize: both;
+    grid-template-columns:  25% 25% 25% 25%;
+    grid-row: 100%;
+    column-gap: 10px;
+    height: 30px;
+}
+#headerPlace{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background:red;
+}
+.sendButton{
+    display:flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: gold;
+    text-align: center;
+    align-items: center;
+}
+
+.cityClass{
+    padding-left: 5px;
 }
