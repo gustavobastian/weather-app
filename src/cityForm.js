@@ -1,6 +1,5 @@
 const api = require("./env")
 const weather = require("./weatherService.js")
-//import {weather} from './weatherService.js';
 
 const cityForm= function(){
     let city=" ";
@@ -73,9 +72,18 @@ const cityForm= function(){
         localSendButton.addEventListener("click",async ()=>{
             console.log("clicked")
             let location= city +","+state+","+country;
-            console.log(location)
-            let localdata=await(localW.getData(location));
+            if(city==null || city==" ")
+            { 
+                window.alert("no city, please check");
+                return;
+            }
+            
+            let localdata;
+            
+            localdata = await(localW.getData(location));
             console.log(localdata);
+            
+            
         })
 
         let localCityInputListener = document.getElementById('localCityInput');

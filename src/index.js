@@ -2,6 +2,7 @@ import { apiWeather,apiGif } from "./env";
 
 import {weather} from './weatherService.js';
 import {cityForm} from './cityForm.js';
+import {headerList} from './header.js';
 
 import './style.css'; 
 
@@ -30,6 +31,7 @@ mainContent.appendChild(footer);
 document.body.appendChild(mainContent);
 
 let localW=weather();
+let localHeader=headerList();
 
 async function  cityform(localW){
     let myCity=cityForm();

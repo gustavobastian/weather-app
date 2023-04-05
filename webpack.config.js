@@ -19,7 +19,10 @@ module.exports = {
     cityForm:{
         import:'./src/cityForm.js',                
         dependOn:'weatherService',                     
-    },             
+    },                   
+    header:{
+        import:'./src/header.js',                    
+       },         
   },
   plugins: [
     new HtmlWebpackPlugin({
