@@ -6,8 +6,19 @@ module.exports = {
   mode:'development', 
   entry: {
     index:{
-      import:'./src/index.js',                  
+      import:'./src/index.js', 
+      //dependOn:'weatherService',                 
       },  
+    weatherService:{
+        import:'./src/weatherService.js',                                          
+        dependOn:'env',                 
+        },    
+    env:{
+         import:'./src/env.js',                    
+        },        
+    cityForm:{
+    import:'./src/cityForm.js',                    
+    },             
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -29,6 +40,7 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
+      
     ],
   },
 };
