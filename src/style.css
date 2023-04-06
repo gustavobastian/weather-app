@@ -64,7 +64,7 @@ p{
     text-align: center;
     align-items: center;
     height: 20px;
-    width: min(100px,100%);
+    width: min(75px,100%);
     border-radius: 50px;
 }
 
