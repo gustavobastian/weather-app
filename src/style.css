@@ -3,7 +3,7 @@
     display: flex;
     resize: both;
     flex-direction: column;    
-    background: green;
+    background: rgb(59, 151, 59);
     height: 100vh;    
     position: relative;
     width: 100%;
@@ -33,32 +33,53 @@
 }
 #innerPlace{
     display: grid;    
+    resize: both;
     grid-template-columns: 100%;
-    grid-template-rows: 50% 50% ;    
+    grid-template-rows: 100%;    
     width: 80%;
     margin-left:10%;
     margin-right:10%;
+    height: auto;
 }
 .contentForm{
     display:grid;    
     margin-top: 10px;
     grid-template-columns:  25% 25% 25% 25%;
-    grid-row: 100%;
-    column-gap: 10px;
-    height: 30px;
+    grid-row: 50% 50%;
+    column-gap: 10px;    
+    height: auto;
 }
 
 .sendButton{
     display:flex;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
     background: gold;
+    
     text-align: center;
     align-items: center;
+    height: 20px;
+    width: 50%;
+    border-radius: 50px;
 }
 
 .cityClass{
     padding-left: 5px;
+    margin-top: 0;
+    padding-top: 0;
+    height: 20px;
+}
+.weatherPlace{
+    display:flex;
+    flex-direction: column;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 35px;
+    font-weight: bold;
+
+
 }

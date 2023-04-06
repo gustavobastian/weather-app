@@ -1,10 +1,12 @@
 const api = require("./env")
 const weather = require("./weatherService.js")
 
-const cityForm= function(){
+const cityForm= function(update){
     let city=" ";
     let state=" ";
     let country=" ";
+    let localdata;
+    let localUpdate=update;
 
     function createForm(localW){        
         
@@ -72,18 +74,18 @@ const cityForm= function(){
         localSendButton.addEventListener("click",async ()=>{
             console.log("clicked")
             let location= city +","+state+","+country;
+            
             if(city==null || city==" ")
             { 
-                window.alert("no city, please check");
-                return;
+                location="london";                
             }
             
-            let localdata;
+            
             
             localdata = await(localW.getData(location));
             console.log(localdata);
             
-            
+            localUpdate.upGradeValues(localdata,0,location)
         })
 
         let localCityInputListener = document.getElementById('localCityInput');
@@ -110,7 +112,8 @@ const cityForm= function(){
     }   
     
     return {
-        createForm
+        createForm,
+        localdata
     }
 }
 

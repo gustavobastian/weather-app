@@ -23,6 +23,12 @@ module.exports = {
     header:{
         import:'./src/header.js',                    
        },         
+    currentWeather:{
+        import:'./src/currentWeather.js',                    
+       },            
+    imgService:{
+        import:'./src/imgService.js',                    
+       },               
   },
   plugins: [
     new HtmlWebpackPlugin({
