@@ -52,7 +52,7 @@ async function intialCondition(){
 
     let content=document.getElementById('imgPlace')
     content.innerHTML=" ";
-    let dataImage =await imageService.getImage("hot");
+    let dataImage =await imageService.getImage("rain");
     console.log(JSON.stringify(dataImage));
     content.src=(dataImage).data.images.original.url;
     content.style.height="200px";
