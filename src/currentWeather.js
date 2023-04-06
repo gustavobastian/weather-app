@@ -60,7 +60,7 @@ const currentWeather= function(imageService){
             contentGeneral.style.backgroundColor="white";
         }
         if(localTemperature>=0 && localTemperature<=25){
-            contentGeneral.style.backgroundColor="rgb(0, 255, 234)";
+            contentGeneral.style.backgroundColor="rgb(155, 155, 154)";
         }
         if(localTemperature>25){
             contentGeneral.style.backgroundColor="red";
