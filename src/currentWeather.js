@@ -23,7 +23,7 @@ const currentWeather= function(imageService){
         locationElement.appendChild(locationText);
 
         let temperature=document.createElement('div')
-        temperature.nameClass="temperature";
+        temperature.nameClass="temperature";        
         let temperatureText;
 
         if(mode==0)
@@ -57,13 +57,13 @@ const currentWeather= function(imageService){
 
         let contentGeneral=document.getElementById('mainContent')
         if(localTemperature<0){
-            contentGeneral.style.backgroundColor="white";
+            contentGeneral.style.backgroundColor="rgb(190, 190, 190)";
         }
         if(localTemperature>=0 && localTemperature<=25){
-            contentGeneral.style.backgroundColor="rgb(155, 155, 154)";
+            contentGeneral.style.backgroundColor="rgb(155, 255, 254)";
         }
         if(localTemperature>25){
-            contentGeneral.style.backgroundColor="red";
+            contentGeneral.style.backgroundColor="rgb(170, 41, 10)";
         }
 
         let contentImage=document.getElementById('imgPlace')
@@ -71,7 +71,7 @@ const currentWeather= function(imageService){
         let dataImage =await imageService.getImage(data.condition.text);
         console.log(JSON.stringify(dataImage));
         contentImage.src=(dataImage).data.images.original.url;
-        contentImage.style.height="200px";
+        contentImage.style.width="90%";
         contentImage.style.marginTop="20px";
         
     }
