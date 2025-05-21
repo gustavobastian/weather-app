@@ -1,4 +1,4 @@
-import { apiWeather,apiGif } from "./env";
+
 
 import {weather} from './weatherService.js';
 import {cityForm} from './cityForm.js';
