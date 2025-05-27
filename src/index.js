@@ -41,7 +41,6 @@ let update=currentWeather(imageService);
 
 async function intialCondition(){
 
-
     let myCity= cityForm(update);
     myCity.createForm(localW);
     let mode=0;//mode = 0 ºC
@@ -52,8 +51,7 @@ async function intialCondition(){
 
     let content=document.getElementById('imgPlace')
     content.innerHTML=" ";
-    let dataImage =await imageService.getImage("rain");
-    console.log(JSON.stringify(dataImage));
+    let dataImage =await imageService.getImage("rain");    
     content.src=(dataImage).data.images.original.url;
     content.style.height="200px";
     content.style.marginTop="20px";

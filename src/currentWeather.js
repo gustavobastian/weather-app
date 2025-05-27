@@ -3,11 +3,6 @@
 const currentWeather= function(imageService){
     
     async function upGradeValues(data,mode,location){
-        console.log("inside current")  
-        console.log(JSON.stringify(data));
-
-        
-        
         //variables for background
         let localTemperature=data.temp_c;
 
@@ -69,9 +64,9 @@ const currentWeather= function(imageService){
         let contentImage=document.getElementById('imgPlace')
         contentImage.innerHTML=" ";
         let dataImage =await imageService.getImage(data.condition.text);
-        console.log(JSON.stringify(dataImage));
+        
         contentImage.src=(dataImage).data.images.original.url;
-        contentImage.style.width="90%";
+        contentImage.style.width="200px";
         contentImage.style.marginTop="20px";
         
     }

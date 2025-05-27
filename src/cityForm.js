@@ -8,9 +8,8 @@ const cityForm= function(update){
     let localdata;
     let localUpdate=update;
 
-    function createForm(localW){        
+    function createForm(localW){                
         
-        console.log("here");
         let content=document.getElementById("innerPlace")
         
         let contentForm=document.createElement('div')
@@ -72,41 +71,29 @@ const cityForm= function(update){
 
         let localSendButton = document.getElementById('sendButton');
         localSendButton.addEventListener("click",async ()=>{
-            console.log("clicked")
-            let location= city +","+state+","+country;
             
-            if(city==null || city==" ")
-            { 
+            let location= city +","+state+","+country;
+            if(city==null || city==" "){ 
                 location="london";                
             }
             
-            
-            
             localdata = await(localW.getData(location));
-            console.log(localdata);
-            
             localUpdate.upGradeValues(localdata,0,location)
         })
 
         let localCityInputListener = document.getElementById('localCityInput');
         localCityInputListener.addEventListener("change",()=>{
-            console.log("city change");
-            city=localCityInputListener.value;
-            console.log("city:"+city);
+            city=localCityInputListener.value;           
         })
 
         let localStateInputListener = document.getElementById('localStateInput');
         localStateInputListener.addEventListener("change",()=>{
-            console.log("state change")            
-            state=localStateInputListener.value;
-            console.log("state:"+state);
+                    state=localStateInputListener.value;            
         })
 
         let localCountryInputListener = document.getElementById('localCountryInput');
         localCountryInputListener.addEventListener("change",()=>{
-            console.log("country change");
-            country=localCountryInputListener.value;
-            console.log("country:"+country);
+            country=localCountryInputListener.value;            
         })
 
     }   
