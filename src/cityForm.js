@@ -70,16 +70,17 @@ const cityForm= function(update){
         //adding event listeners
 
         let localSendButton = document.getElementById('sendButton');
-        localSendButton.addEventListener("click",async ()=>{
-            
-            let location= city +","+state+","+country;
-            if(city==null || city==" "){ 
-                location="london";                
-            }
-            
-            localdata = await(localW.getData(location));
-            localUpdate.upGradeValues(localdata,0,location)
-        })
+        localSendButton.addEventListener("click", () => {
+            (async () => {
+                let location = city + "," + state + "," + country;
+                if (city == null || city == " ") {
+                    location = "london";
+                }
+                localdata = await (localW.getData(location));
+                localUpdate.upGradeValues(localdata, 0, location)
+            })();
+        }
+        )
 
         let localCityInputListener = document.getElementById('localCityInput');
         localCityInputListener.addEventListener("change",()=>{
